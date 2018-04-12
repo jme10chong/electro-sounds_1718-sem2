@@ -61,6 +61,7 @@ sound = new p5(s0, 'sound');
 
 const s1 = function(p) {
 
+  // variables from the super shape formula
   let n1 = 1;
   let n2 = 1;
   let n3 = 1;
@@ -141,8 +142,8 @@ const s1 = function(p) {
 
     m = highMid;
     m += (m - m/2) * 1;
-    // BEYBLADE!!!
 
+    // spinning tops
     for(let i = 0; i <=2; i++) {
       p.stroke(highMid/2,0,0);
       size = 150;
@@ -151,14 +152,6 @@ const s1 = function(p) {
       superShape(m, p.width-mid, lowMid, size, i);
       superShape(m, treble, p.height-bass, size, i);
     }
-
-    // p.push();
-    // p.translate(p.width/2, p.height/2);
-    // for (let i = -1; i <= 1; i += 2) {
-    //   superShape(m,i*p.abs(p.width/2-treble),-p.height/2,150,0);
-    // }
-    // p.pop();
-
   }
 
 	superShape = function(m, a, b, size, choose) {

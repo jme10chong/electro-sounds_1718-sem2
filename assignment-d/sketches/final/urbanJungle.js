@@ -1,5 +1,3 @@
-// points
-
 let sound;
 
 const s0 = function(p) {
@@ -56,6 +54,7 @@ let p1;
 
 const s1 = function(p) {
 
+  // variables from the super shape formula
   let n1 = 1;
   let n2 = 1;
   let n3 = 1;
@@ -112,25 +111,26 @@ const s1 = function(p) {
     let treble = sound.fft_high.getEnergy("treble")*5; // slightly dynamic value
     let amp = sound.amp.getLevel()*255*2;
 
-    p.background(mid); // monochrome
+    // monochrome background, controlled by mid frequencies
+    p.background(mid);
 
     p.push();
     p.translate(p.width/2, p.height/2);
     p.rotate(treble/25);
     p.strokeWeight(1);
     p.stroke(treble/2);
-
     n1=treble;
+
+    // "floor" of the sketch drawn using super shapes
     superShape(m, 0, 0, 750, 0);
+
     p.pop();
 
-    // static background
+    // "textiles" drawn using points, controlled using treble
     for(let x = 0; x < 30; x++) {
       for(let y = 0; y < 15; y++) {
         p.stroke(bass/2.5);
         p.strokeWeight(3);
-
-
         p.push();
         p.translate(treble, treble);
         p.point(x*60*240/bass, y*40);

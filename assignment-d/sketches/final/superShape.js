@@ -47,6 +47,7 @@ sound = new p5(s0, 'sound');
 
 const s1 = function(p) {
 
+  // variables from the super shape formula
   let n1 = 1;
   let n2 = 1;
   let n3 = 1;

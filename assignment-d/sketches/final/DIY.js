@@ -1,3 +1,6 @@
+// gif creation code courtesy of Andy
+// sketch code is identical to "superShape.js"
+
 const s1 = function(p) {
 
 let gif;
